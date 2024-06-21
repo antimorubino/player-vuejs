@@ -1,0 +1,47 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  /*padding: 2rem;*/
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: #e8490f;
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: #e8490f;
+    color: #fff;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+.page-link {
+  color: #e8490f;
+}
+
+.active>.page-link, .page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: #e8490f;
+  border-color: #e8490f;
+}
